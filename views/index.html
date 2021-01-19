@@ -3,21 +3,29 @@
 <html>
   <head>
     <title>Metafile</title>
-    <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet" type="text/css" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Fugaz+One&family=Libre+Baskerville&family=Roboto+Mono&display=swap"
+      rel="stylesheet"
+    />
+
     <link href="/public/style.css" rel="stylesheet" type="text/css" />
   </head>
 
   <body>
     <div class="container">
-      <h2>API Project: File Metadata Microservice</h2>
+      <h1>Filemeta</h1>
+      <h2>A simple file upload and analysis</h2>
 
-      <h3>Usage:</h3>
-      <p>Please Upload a File ...</p>
+      <p>
+        Upload a file to receive a <code>JSON</code> object that tells you the filename, the filetype, and the size of
+        the file in bytes.
+      </p>
+      <!-- <h3>Usage:</h3> -->
+      <p>Please Upload a File&hellip;</p>
       <div class="view">
         <h4 id="output"></h4>
-        <!-- Original - might need the url -->
         <form enctype="multipart/form-data" method="POST" action="/api/fileanalyse">
-          <!-- <form enctype="multipart/form-data" method="POST" action="/upload"> -->
           <input id="inputfield" type="file" name="upfile" />
           <input id="button" type="submit" value="Upload" />
         </form>
